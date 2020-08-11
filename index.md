@@ -53,6 +53,18 @@ A public virtual interface can access all AWS public services using public IP ad
 - **Transit virtual interface:**\
 A transit virtual interface should be used to access one or more Amazon VPC Transit Gateways associated with Direct Connect gateways. You can use transit virtual interfaces with 1/2/5/10 Gbps AWS Direct Connect connections. For information about Direct Connect gateway configurations, see Direct Connect gateways.
 
+# Azure Firewall
+Azure Firewall is a cloud native network security service. It offers fully stateful network and application level traffic filtering for VNet resources, with built-in high availability and cloud scalability delivered as a service. You can protect your VNets by filtering outbound, inbound, spoke-to-spoke, VPN, and ExpressRoute traffic. Connectivity policy enforcement is supported across multiple VNets and Azure subscriptions. You can use Azure Monitor to centrally log all events. You can archive the logs to a storage account, stream events to your Event Hub, or send them to Log Analytics or your security information and event management (SIEM) product of your choice.
+
+# Azure Firewall and network virtual appliances
+Network security solutions can be delivered as appliances on premises, as network virtual appliances (NVAs) that run in the cloud or as a cloud native offering (known as firewall-as-a-service).
+Customers often ask us how Azure Firewall is different from Network Virtual Appliances, whether it can coexist with these solutions, where it excels, what’s missing, and the TCO benefits expected. 
+
+# Network virtual appliances (NVAs)
+Third party networking offerings play a critical role in Azure, allowing you to use brands and solutions you already know, trust and have skills to manage. Most third-party networking offerings are delivered as NVAs today and provide a diverse set of capabilities such as firewalls, WAN optimizers, application delivery controllers, routers, load balancers, proxies, and more. These third party capabilities enable many hybrid solutions and are generally available through the Azure Marketplace. For best practices to consider before deploying a NVA, see Best practices to consider before deploying a network virtual appliance.
+
+# Cloud native network security
+A cloud native network security service (known as firewall-as-a-service) is highly available by design. It auto scales with usage, and you pay as you use it. Support is included at some level, and it has a published and committed SLA. It fits into DevOps model for deployment and uses cloud native monitoring tools.
 
 # Author Profile:
 - [LinkedIn: atuljkamble](https://www.linkedin.com/in/atuljkamble) 
