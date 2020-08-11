@@ -41,6 +41,22 @@ Aviatrix is also able to integrate multiple accounts and clouds seamlessly and o
 To help its service run smoothly, Aviatrix provides many security and compliance measures. It allows users to manage security domains, such as the Development domain and the Production domain, and also allows for Virtual Private Cloud connectivity through Connection Policies. Users are able to easily apply firewall filters based on tags or specific address ranges, CIDR, protocols, and ports.
 Aviatrix services are also integrated with AWS GuardDuty to block malicious activity automatically at the Virtual Private Cloud network level.
 
+# AWS Direct Connect virtual interfaces
+You must create one of the following virtual interfaces to begin using your AWS Direct Connect connection.
+
+- **Private virtual interface:**\
+A private virtual interface should be used to access an Amazon VPC using private IP addresses.
+
+- **Public virtual interface:**\
+A public virtual interface can access all AWS public services using public IP addresses.
+
+- **Transit virtual interface:**\
+A transit virtual interface should be used to access one or more Amazon VPC Transit Gateways associated with Direct Connect gateways. You can use transit virtual interfaces with 1/2/5/10 Gbps AWS Direct Connect connections. For information about Direct Connect gateway configurations, see Direct Connect gateways.
+
+
+
+
+
 # Author Profile:
 - [LinkedIn: atuljkamble](https://www.linkedin.com/in/atuljkamble) 
 - [Twitter: atul_kamble](https://www.twitter.com/atul_kamble)
