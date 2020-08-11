@@ -54,12 +54,8 @@ A public virtual interface can access all AWS public services using public IP ad
 A transit virtual interface should be used to access one or more Amazon VPC Transit Gateways associated with Direct Connect gateways. You can use transit virtual interfaces with 1/2/5/10 Gbps AWS Direct Connect connections. For information about Direct Connect gateway configurations, see Direct Connect gateways.
 
 
-
-
 # Author Profile:
 - [LinkedIn: atuljkamble](https://www.linkedin.com/in/atuljkamble) 
 - [Twitter: atul_kamble](https://www.twitter.com/atul_kamble)
 - [Github: atulkamble](https://www.github.com/atulkamble)
 - [Medium: atul_kamble](https://medium.com/@atul_kamble)
-
-
