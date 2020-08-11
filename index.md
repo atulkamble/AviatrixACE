@@ -56,7 +56,6 @@ A transit virtual interface should be used to access one or more Amazon VPC Tran
 
 
 
-
 # Author Profile:
 - [LinkedIn: atuljkamble](https://www.linkedin.com/in/atuljkamble) 
 - [Twitter: atul_kamble](https://www.twitter.com/atul_kamble)
