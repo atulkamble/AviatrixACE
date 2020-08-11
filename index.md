@@ -68,6 +68,51 @@ Third party networking offerings play a critical role in Azure, allowing you to 
 ### - Cloud native network security
 A cloud native network security service (known as firewall-as-a-service) is highly available by design. It auto scales with usage, and you pay as you use it. Support is included at some level, and it has a published and committed SLA. It fits into DevOps model for deployment and uses cloud native monitoring tools.
 
+# Internet Protocol Security (IPSec)
+In computing, Internet Protocol Security (IPsec) is a secure network protocol suite that authenticates and encrypts the packets of data to provide secure encrypted communication between two computers over an Internet Protocol network. It is used in virtual private networks (VPNs).
+
+### Working of IPsec 
+IPsec connections include the following steps:
+
+- **Key exchange:**\
+Keys are necessary for encryption; a key is a string of random characters that can be used to "lock" (encrypt) and "unlock" (decrypt) messages. IPsec sets up keys with a key exchange between the connected devices, so that each device can decrypt the other device's messages.
+
+- **Packet headers and trailers:**\
+All data that is sent over a network is broken down into smaller pieces called packets. Packets contain both a payload, or the actual data being sent, and headers, or information about that data so that computers receiving the packets know what to do with them. IPsec adds several headers to data packets containing authentication and encryption information. IPsec also adds trailers, which go after each packet's payload instead of before.
+
+- **Authentication:**\
+IPsec provides authentication for each packet, like a stamp of authenticity on a collectible item. This ensures that packets are from a trusted source and not an attacker.
+
+- **Encryption:**\
+IPsec encrypts the payloads within each packet and each packet's IP header (unless transport mode is used instead of tunnel mode — see below). This keeps data sent over IPsec secure and private.
+
+- **Transmission:**\ 
+Encrypted IPsec packets travel across one or more networks to their destination using a transport protocol. At this stage, IPsec traffic differs from regular IP traffic in that it most often uses UDP as its transport protocol, rather than TCP. TCP, the Transmission Control Protocol, sets up dedicated connections between devices and ensures that all packets arrive. UDP, the User Datagram Protocol, does not set up these dedicated connections. IPsec uses UDP because this allows IPsec packets to get through firewalls.
+
+- **Decryption:**\
+At the other end of the communication, the packets are decrypted, and applications (e.g. a browser) can now use the delivered data.
+
+## IPsec impact on MSS and MTU?
+**MSS** and **MTU** are two measurements of packet size. Packets can only reach a certain size (measured in bytes) before computers, routers, and switches cannot handle them. MSS measures the size of each packet's payload, while MTU measures the entire packet, including headers. Packets that exceed a network's MTU may be fragmented, meaning broken up into smaller packets and then reassembled. Packets that exceed the MSS are simply dropped.
+
+IPsec protocols add several headers and trailers to packets, all of which take up several bytes. For networks that use IPsec, either the MSS and MTU have to be adjusted accordingly, or packets will be fragmented and slightly delayed. Usually, the MTU for a network is 1,500 bytes. A normal IP header is 20 bytes long, and a TCP header is also 20 bytes long, meaning each packet can contain 1,460 bytes of payload. However, IPsec adds an Authentication Header, an ESP header, and associated trailers. These add 50-60 bytes to a packet, or more.
+
+## MTU setting on the IPSec Tunnels between the Aviatrix Gateways
+All the IPSec tunnels have the TCP MSS set to 1370 bytes, by default, on Aviatrix gateway created in AWS, Azure and OCI. In GCP, the default value is 1350 bytes due to previous experience with some GCP applications. If you are running any applications which do not support fragmentation, you might have issues - please adjust the MTU on your end devices. Here are a couple examples of ssh failing due to MTU - ssh hangs due to MTU, music fails due to MTU
+
+You can adjust the TCP MSS at “Aviatrix Console > Settings > Advanced > Tunnel > TCP MAXIMUM SEGMENT SIZE(MSS)” on the Aviatrix gateway.
+
+Please note that it is recommended that you do not set the MTU to a value higher than 1370 bytes.
+
+# Virtual Private Network (VPN)
+A virtual private network (VPN) is an encrypted connection between two or more computers. VPN connections take place over public networks, but the data exchanged over the VPN is still private because it is encrypted.
+
+VPNs make it possible to securely access and exchange confidential data over shared network infrastructure, such as the public Internet. For instance, when employees are working remotely instead of in the office, they often use VPNs to access corporate files and applications.
+
+Many VPNs use the IPsec protocol suite to establish and run these encrypted connections. However, not all VPNs use IPsec. Another protocol for VPNs is SSL/TLS, which operates at a different layer in the OSI model than IPsec. (The OSI model is an abstract representation of the processes that make the Internet work.)
+
+
+
 # Author Profile:
 - [LinkedIn: atuljkamble](https://www.linkedin.com/in/atuljkamble) 
 - [Twitter: atul_kamble](https://www.twitter.com/atul_kamble)
