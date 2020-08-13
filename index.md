@@ -123,7 +123,54 @@ Connection to Microsoft services can be through the universal network or through
 - Express route improves security and privacy by avoiding sensitive traffic going over the public internet
 - Supports business Skype
 
+## Characteristics of ExpressRoute
+- Layer 3 connectivity
+- Microsoft uses BGP to establish routing between the local network, Microsoft public addresses, and Azure.
 
+## Redundancy
+Each Express Route connection includes two Microsoft Enterprise Edge and two-router connections in between the connectivity provider and the local network perimeter. Microsoft ensures there's a BGP connection between the connectivity and the edge of the on-premise network one each allocated for the MSEE router. For the validation of the SLA, there must be a redundant layer 3 configured.
+
+## Microsoft Cloud services connectivity
+Express route enables someone to access the following cloud services:
+Microsoft Office 365 services, Microsoft Azure services and Microsoft Dynamics 365
+
+**Connectivity to all regions of the world**\
+Through the use of Azure express route, organizations can connect to Microsoft in one location and access all services of Microsoft cloud in the whole world.
+
+**Global connectivity with premium ExpressRoute add-on**\
+You are able to permit the high-quality ExpressRoute add-on feature in order to extend connectivity beyond geopolitical boundaries.
+
+**ExpressRoute connectivity models**\
+Users can create a connection between the on-premise network and Microsoft cloud through a point-to-point Ethernet, cloud-based co-location and universal connection (IPVPN) connection. Connectivity companies may offer one or more connectivity models.
+
+**Point-to-point Ethernet connections**\
+Ethernet links are used in point to point connections. On-Premises and Azure can be linked using Point-to-point Ethernet providers. The relationships can either be layer 2 or managed layer three connections.
+
+**Universal Networks (IPVPN)**\
+The extended network can be integrated into Microsoft cloud using IPSec VPN providers. The providers above connect data centers and branch offices. To appear like any other branch, Microsoft cloud can be interconnected to WAN whose providers provide mainly managed layer three connectivity.
+
+Connectivity providers use ExpressRoute circuits that allow a connection between local infrastructure and Microsoft. For all connectivity models, ExpressRoute capabilities and features are the same.
+
+**ExpressRoute Circuits**\
+A logical connection between Microsoft cloud services and local infrastructure via a connection provider is referred to as the ExpressRoute circuit. ExpressRoute circuits can be ordered in bulk and they can be purchased across regions. The connection between the ExpressRoute circuits and your data centers is through connectivity providers.
+
+Notably, ExpressRoute circuits are never mapped to physical entities. Instead, they are identified using a standard GUID, known as service key (S-key). S-key constitutes the only information shared amongst the user, connectivity provider, and Microsoft. It is not for security reasons that the s-key is secret. Between an ExpressRoute circuit and the service key, there exists a one-to-one mapping.
+
+**Peering ExpressRoute**\
+Azure public, Azure private, and Microsoft are the associated routing/peering domains in ExpressRoute circuit. For high availability, each peering is configured identically on a pair of routers (in active-active or load-sharing configuration). To represent IP addressing schemes, Azure services are classified as Public Azure and Private Azure.
+
+**Azure private certification**\
+Private trust domain connects Azure Computer Services, i.e., virtual machines (IaaS) and cloud services (PaaS) that are deployed within a virtual network. In Microsoft Azure, the connection is deemed as a trusted extension of a core network. A configuration can be done to establish bidirectional connectivity between the core network and Azure virtual networks. The above registration allows for connectivity of virtual machines and cloud services on private IP addresses directly.
+
+**Microsoft ExpressRoute Scenarios**\
+Since Office 365 is meant to be reliably and securely accessible over the Internet, it is recommendable that ExpressRoute should be used in particular scenarios.
+
+Microsoft trust allows for Connectivity to Microsoft online services, i.e., Office 365, Dynamics 365, and Azure PaaS services. The Microsoft Trust Routing Domain enables two-way connectivity between WAN and Microsoft cloud services. However, the connection must be through public IP addresses that are owned by either the user or the connectivity provider. All the defined rules must be respected.
+
+**Azure public peering (deprecated for new circuits)**\
+Some services must be offered in public IP addresses, e.g., Azure Storage, SQL databases and Websites. Connectivity to services hosted on public IP addresses, including the virtual IP addresses of cloud services, can be done privately via the public trust routing domain. Connection to public trust domain to user DMZ can be established and connected to all Azure services on the public IP addresses from user WAN without having to communicate via the Internet.
+
+Often, connectivity is initiated from user WAN to Microsoft Azure Services. The above routing domain does not allow for connectivity to the user network. The user can sign in to all Azure services after the publication registration has been enabled. The user is not allowed to select the services for which routes are published.
 
 # Author Profile:
 - [LinkedIn: atuljkamble](https://www.linkedin.com/in/atuljkamble) 
