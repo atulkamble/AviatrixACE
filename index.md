@@ -53,6 +53,43 @@ A public virtual interface can access all AWS public services using public IP ad
 - **Transit virtual interface:**\
 A transit virtual interface should be used to access one or more Amazon VPC Transit Gateways associated with Direct Connect gateways. You can use transit virtual interfaces with 1/2/5/10 Gbps AWS Direct Connect connections. For information about Direct Connect gateway configurations, see Direct Connect gateways.
 
+
+# VNet
+A Virtual Network, or a VNet, is an isolated network within the Microsoft Azure cloud. A VNet in Azure provides a range of networking functions comparable to AWS Virtual Private Cloud (VPC). These functions include DNS, routing, enabling customization of DHCP blocks, access control, connectivity between virtual machines (VM) and virtual private networks (VPN).
+
+An Azure VNet is a representation of a network in the cloud and is logical isolation of the Azure cloud dedicated to a subscription. In the background, it's a software abstraction of a network that overlays Azure’s infrastructure to provide isolation from resources outside of the VNet, practically making it a private network.
+
+Operationally, a VNet follows common IP routing principles to connection resources inside. So, it needs to have one or more address spaces associated with it (CIDR), which can be segmented into subnets, within which resources will reside. The scope of a virtual network is a single region; however, several virtual networks of the same or different regions can be connected together by virtual network peering.
+
+### VNets can be used to:
+Create a dedicated private cloud-only VNet to allow services and VMs within the VNet to communicate directly and securely in the cloud.
+Securely extend a data center, by building traditional site-to-site (S2S) VPNs or Express Route private circuits, to securely scale capacity.
+Deploy hybrid clouds by securely connecting cloud-based applications to on-premises systems.
+
+## Key components of Azure VNets, include:
+**Subnets:** Subdivide a VNet into multiple networks which can be used for more granular separation of services
+**IP addresses:** Assign public or private IP addresses to an Azure VNet.
+- Use public IP address for public-facing communications. A dynamic or static IP can be assigned.
+- Use private IP address for connectivity within a VNet when using a VPN gateway or ExpressRoute. A dynamic IP assignment is a default, but a static IP can also be assigned.
+**Network Security Groups (NSG):** Network traffic ACLs which can be applied at a subnet or NIC level for filtering
+**Application Security Groups (ASG):** Group common workloads in world readable tags for use in NSGs
+**Service Endpoints:** secure critical Azure services resources to your VNET
+**Private Link:** private connectivity from a VNET to an Azure PaaS resource, customer-owned service, or Microsoft partner platform.
+**Firewall:** Azure offers a managed Firewall service that provides the ability to define L3-7 connectivity policies for granular control of what enters and leaves the network
+**Load balancing:** Load balancing solutions offered by Azure include:
+- Azure Traffic Manager – comparable to Route53 in AWS
+- Azure Load Balancer
+- Azure Application Gateway
+- Azure Front Door
+**Routing tables:** As with general routing, anytime traffic needs to leave a subnet, it needs a routing function to forward packets to other subnets and networks. A router does this using a routing table, and that route table configuration is exposed in Azure for customized configuration. Route table can have rules that define where traffic should be sent to, i.e a virtual network, virtual network gateway or virtual machine.
+**User Defined Route (UDR):** A static entry in a Route Table which can be used to forward traffic to a different Vnet, Network Virtual Appliance, . This can be a powerful tool to build a connection between hubs.
+**Network Virtual network Appliance (NVA):** Optional, for integration of 3rd party solutions, a virtual network appliance can be inserted into a VNet. This appliance is a virtual machine that executes a network function, such as a firewall, WAN optimization or other network function. To see a list of virtual network applications that can be deployed in a virtual network, see Azure Marketplace.
+
+# Remote User VPN
+Aviatrix provides a cloud-native and feature-rich client VPN solution. The solution is based on OpenVPN® and is compatible with all OpenVPN® clients. In addition, Aviatrix provides its own client that supports SAML authentication directly from the client.
+
+
+
 # Aviatrix Transit Architecture for Azure
 
 - **Azure Native Transit**\
