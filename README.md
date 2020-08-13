@@ -8,12 +8,16 @@ The ACE certification is designed for individuals who already understand basic n
 
 # Aviatrix ACE (Aviatrix Certified Engineer) Multi-Cloud Networking Associate Exam Study Guide + Notes
 
-- [Aviatrix ACE Exam Study Notes](https://atulkamble.github.io/AviatrixACE/)
-- [Aviatrix Certified Engineer (ACE) Multi-Cloud Networking & Security Official Course](https://aviatrix.teachable.com/)
-- [Acclaim Badge](https://www.youracclaim.com/org/aviatrix/badge/aviatrix-certified-engineer-multi-cloud-network-associate)
+- [Aviatrix ACE Exam Study Notes by Atul](https://atulkamble.github.io/AviatrixACE/)
+- [Aviatrix ACE Official Course](https://aviatrix.teachable.com/)
+- [Aviatrix Docs](https://docs.aviatrix.com/)
+- [Aviatrix Cloud Network Learning Center](https://a.aviatrix.com/learning/)
+- [Aviatrix Questions and Answers](https://a.aviatrix.com/answers/)
+- [Aviatrix Bolgs](https://aviatrix.com/aviatrix-blog/)
+- [Aviatrix ACE Acclaim Badge](https://www.youracclaim.com/org/aviatrix/badge/aviatrix-certified-engineer-multi-cloud-network-associate)
 - [Aviatrix Community](https://community.aviatrix.com/)
 
-# Author Profile:
+# Technical Author Profile (Study Guide + Notes):
 - [LinkedIn: atuljkamble](https://www.linkedin.com/in/atuljkamble) 
 - [Twitter: atul_kamble](https://www.twitter.com/atul_kamble)
 - [Github: atulkamble](https://www.github.com/atulkamble)
