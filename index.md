@@ -111,6 +111,18 @@ VPNs make it possible to securely access and exchange confidential data over sha
 
 Many VPNs use the IPsec protocol suite to establish and run these encrypted connections. However, not all VPNs use IPsec. Another protocol for VPNs is SSL/TLS, which operates at a different layer in the OSI model than IPsec. (The OSI model is an abstract representation of the processes that make the Internet work.)
 
+# Azure Express Route
+Express route allows a private connection between the local network and the Microsoft cloud. Using express route organizations/users can connect to several Microsoft cloud services (cloud products e.g. Microsoft dynamics 365, Microsoft Azure and Office 365)
+
+Connection to Microsoft services can be through the universal network or through point to point Ethernet connection via a network connectivity provider to the data center. Public internet cannot be used to establish a connection to the express route.
+
+### Main benefits of express route
+- Express route allows organizations to connect to Microsoft cloud services anywhere in the world
+- Express route provides layer 3 connection between the Azure cloud and the local network
+- Express route increases reliability due to the built-in redundancy
+- Express route improves security and privacy by avoiding sensitive traffic going over the public internet
+- Supports business Skype
+
 
 
 # Author Profile:
