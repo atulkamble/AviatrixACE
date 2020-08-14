@@ -25,7 +25,7 @@ Aviatrix is also able to integrate multiple accounts and clouds seamlessly and o
 To help its service run smoothly, Aviatrix provides many security and compliance measures. It allows users to manage security domains, such as the Development domain and the Production domain, and also allows for Virtual Private Cloud connectivity through Connection Policies. Users are able to easily apply firewall filters based on tags or specific address ranges, CIDR, protocols, and ports.
 Aviatrix services are also integrated with AWS GuardDuty to block malicious activity automatically at the Virtual Private Cloud network level.
 
-# Features of Aviatrix
+## Features of Aviatrix
 
 - **Centralized Controller**\
 Networking VPCs and VNETs don’t have to be complex. Take full control of your cloud network. No knowledge of networking command line interfaces (CLIs) needed.
