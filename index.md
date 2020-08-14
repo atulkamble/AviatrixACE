@@ -4,6 +4,61 @@
 Aviatrix Systems is a software company headquartered in Santa Clara, California, the heart of Silicon Valley. Aviatrix software provides a platform for companies to build networking and security infrastructure in the public cloud. The platform provides architecture applicable to both single and multiple public cloud deployments. Currently, the software supports public clouds such as AWS, Azure, GCP, and OCI.
 Aviatrix Systems was the recipient of the Gartner Cool Vendor award in Cloud Computing in 2017 and is the pioneer of Multi-Cloud Network Architecture (MCNA).
 
+# Features of Aviatrix
+
+- **Centralized Controller**\
+Networking VPCs and VNETs don’t have to be complex. Take full control of your cloud network. No knowledge of networking command line interfaces (CLIs) needed.
+1. Browser-based, point-and-click management console
+2. Orchestrates both native (AWS, Azure & GCP) constructs and advanced services from Aviatrix
+3. Aviatrix Gateway instances for direct connect, multi cloud, and edge connectivity
+4. Makes complex networking easy for all your use cases
+
+- **Operational Visibility**\
+It’s hard to “see” your network in the cloud. CoPilot makes it visible to you and informs when your cloud network has issues.
+1. Get a complete picture of your cloud network
+2. Visualize all connectivity status, performance and latency in real-time
+3. Call up monitoring, displays and alerts
+4. Make informed VPC connectivity decisions
+5. Share findings with colleagues and staff
+
+- **Multiple Accounts and Clouds**\
+Get the most out of the public cloud. Most virtual routers are from the datacenter era, forcing you to uniquely build every point-to-pont connection. Instead, operate with a cloud-native platform for all your accounts, regions, VPCs and VNETs
+1. Manage multiple accounts and regions in one place
+2. Network cloud regions from a global view, not point-to-point
+3. Interconnect AWS, Azure, and Google Cloud with the same point & click flow
+
+- **Security & Compliance**\
+Handle your part of the cloud Shared Responsibility Model. Meet your regulatory compliance requirements. Implement VPC network segmentation and isolation to reduce your blast radius.
+1. Manage Security Domains (e.g, Dev, Prod, Shared Services VPCs)
+2. VPC connectivity is allowed by Connection Policies
+3. User friendly tags to specify network ranges for security rules
+4. Easily apply firewall filters based on tags or specific address ranges, CIDR, protocols, and ports.
+5. Control outbound traffic from your VPCs with egress filtering
+6. Make audits easier as security policy events (and packets) can be logged to Splunk, SumoLogic, Syslog, ELK and Datadog.
+7. Integration with AWS GuardDuty to block malicious activity automatically at the VPC network level
+
+- **Simplify with Automation**\
+Automate your cloud networking by delivering the network as code, rather than as a series of manually configured virtual routers. With Aviatrix, networking functionality easily becomes part of your cloud stack. No CCIE, no problem.
+1. Orchestrate your network in the same way as your compute
+2. Leverage DevOps processes using change and revision control
+3. Controller has fully documented REST APIs
+4. Easily leverage our Terraform provider and CloudFormation templates
+
+- **Faster Troubleshooting**\
+Easily handle your daily calls to fix problems. Usually the network is blamed, even when it’s not the culprit. Quickly determine if networking is the issue. Minimize downtime with faster troubleshooting.
+1. Integrated diagnostic tools for easier and faster troubleshooting
+2. Limited use of Border Gateway Protocol (BGP)
+3. Automated EC2 FlightPath tool helps identify EC2 instance connectivity problems
+4. Continuous monitoring of your multi-cloud network with alerts available from the deployment dashboard
+5. Move at the speed of the cloud
+
+- **Integrated Analytics**\
+Drive your cloud networking decisions with intuitive, meaningful, real-time reports. Plug in your modern tool stack for an integrated view of all your infrastructure.
+1. Integrated monitoring, alerting and troubleshooting
+2. Comprehensive syslog for network statistics, policy violations and more
+3. API integration with modern cloud tools: Splunk, SumoLogic, Syslog, ELK and Datadog.
+4. Robust API to easily integrate with Netflow and CloudWatch
+
 ### Multi Cloud Network Architecture (MCNA)
 MCNA is unlike any other architecture because it embraces, controls, and manages not only the native cloud constructs but also provides advanced services beyond what the Cloud Services Providers (AWS, Azure, GCP, and OCI) can provide. It provides a consistent and repeatable architecture across multiple clouds, being the first in the industry to do so, making it an essential part of the present and future of the public cloud.
 Aviatrix creates a purpose-built Multi-Cloud Network Architecture (MCNA) by implementing a data plane through dynamic and software-defined routing with a centralized control plane. Security is built into the network architecture through segmentation, encryption, ingress and egress filtering, and security services insertion. Aviatrix also leverages orchestrating cloud-native constructs, where necessary, in building and controlling the enterprise network and life-cycle management of the overall architecture. 
