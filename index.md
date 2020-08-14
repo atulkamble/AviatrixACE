@@ -135,6 +135,31 @@ The alternative to Transit architecture is to leverage the native options alread
 - **No Route Limits** The Aviatrix solution auto summarizes the on-prem and Spoke VNet routes so that Spoke VNet route entries do not exceed the route limits.
 - **End-to-End Encryption** All traffic in flight, between Spoke VNets and between Spoke to on-prem, is encrypted.
 
+# Aviatrix Stateful Firewall Rule
+Aviatrix stateful firewall is feature on the Aviatrix gateway. It is a L4 stateful firewall that filters network CIDR, protocol and port on the packet forwarding path.
+The stateful firewall allows each individual rule to be defined as Allow, Deny and Force Drop, in addition to a base rule.
+
+- **How many rules can be configured on a gateway?**
+Currently you can configure up to 500 rules on each gateway. This limitation is not due to the lack of capacity in the gateways, but is because of the implementation of how rules are sent to the gateways. In the next release (5.2), the limitation will be removed.
+
+- **What is the API to configure stateful firewall?**
+Currently the API call requires you to input the entire set of the rules for each call. There is no incremental append or delete functions.
+In the next release (5.2), there will be new APIs to append new rules and delete a specific rule.
+
+# Transit VNet using VNet peering
+Azure Virtual Network (VNet) is the fundamental building block for any customer network. VNet lets you create your own private space in Azure, or as I call it your own network bubble. VNets are crucial to your cloud network as they offer isolation, segmentation, and other key benefits. Read more about VNet’s key benefits in our documentation,
+With VNets, you can connect your network in multiple ways. You can connect to on-premises using Point-to-Site (P2S), Site-to-Site (S2S) gateways or ExpressRoute gateways. You can also connect to other VNets directly using VNet peering.
+
+Customer network can be expanded by peering Virtual Networks to one another. Traffic sent over VNet peering is completely private and stays on the Microsoft Backbone. No extra hops or public Internet involved. Customers typically leverage VNet peering in the hub-and-spoke topology. The hub consists of shared services and gateways, and the spokes comprise business units or applications.
+
+# Gateway transit
+Today I’d like to do a refresh of a unique and powerful functionality we’ve supported from day one with VNet peering. Gateway transit enables you to use a peered VNet’s gateway for connecting to on-premises instead of creating a new gateway for connectivity. As you increase your workloads in Azure, you need to scale your networks across regions and VNets to keep up with the growth. Gateway transit allows you to share an ExpressRoute or VPN gateway with all peered VNets and lets you manage the connectivity in one place. Sharing enables cost-savings and reduction in management overhead.
+
+With Gateway transit enabled on VNet peering, you can create a transit VNet that contains your VPN gateway, Network Virtual Appliance, and other shared services. As your organization grows with new applications or business units and as you spin up new VNets, you can connect to your transit VNet with VNet peering. This prevents adding complexity to your network and reduces management overhead of managing multiple gateways and other appliances.
+
+VNet peering works across regions, across subscriptions, across deployment models (classic to ARM), and across subscriptions belonging to different Azure Active Directory tenants.
+
+
 # Author Profile:
 - [LinkedIn: atuljkamble](https://www.linkedin.com/in/atuljkamble) 
 - [Twitter: atul_kamble](https://www.twitter.com/atul_kamble)
