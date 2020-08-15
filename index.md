@@ -232,6 +232,23 @@ Transit gateway peering attachments are not supported in the following AWS Regio
 7. Orchestrate AWS TGW Inter Region Peering and expand the Security Domains to be global.
 8. Advanced mode for end to end encryption where Aviatrix gateways are deployed in the AWS Spoke VPCs and Azure Spokes VNet.
 
+# Aviatrix Firewall Network (FireNet)
+Aviatrix Firewall Network (FireNet) is a turn key network solution to deploy firewall instances in the cloud.
+FireNet significantly simplifies firewall instance deployment and allows the firewall instances to inspect VPC to VPC (East West) traffic, VPC to Internet (Egress) traffic, and VPC to on-prem (North South) traffic
+
+### Benefits of FireNet Deployment Model
+For enterprises that wish to deploy a firewall in AWS, Aviatrix’s FireNet deployment model provides the best performance and automation.
+
+- **Simplicity** The Aviatrix Firewall Network significantly simplifies firewall deployment in the cloud while providing the maximum performance and scale.
+- **Full Traffic Inspection** With FireNet, North South (on-prem and cloud), East West (VPC to VPC) and Internet bound egress traffic can be inspected by firewall instances.
+- **No IPSEC Tunnels** There are no IPSEC tunnels connecting to firewall instances as opposed to ECMP VPN deployment model, maximizing each firewall instance throughput.
+- **No SNAT** SNAT function is not required to be performed by firewall instances for east west traffic inspection as opposed to the ECMP VPN deployment model, resulting in instances in Spoke VPCs having complete visibility of source traffic.
+- **No BGP** The Firewall does not need to run BGP. All routes programming is done by the Controller through Palo Alto APIs.
+- **Scale Out** Multiple firewall instances can be deployed as a group to meet the demand of increasing workload.
+- **Policy Driven** Policy driven workflow allows you to customize which VPCs traffic should be inspected.
+- **Vendor Integration** Launch Palo Alto Networks VM-Series from the Aviatrix Controller console to simplify deployment.
+- **Automation** The Aviatrix Controller automatically updates Palo Alto VM-Series route tables when on-prem route changes or VPC attachment changes.
+
 # Author Profile:
 - [LinkedIn: atuljkamble](https://www.linkedin.com/in/atuljkamble) 
 - [Twitter: atul_kamble](https://www.twitter.com/atul_kamble)
