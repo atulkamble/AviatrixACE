@@ -222,6 +222,16 @@ We recommend using unique ASNs for the peered transit gateways to take advantage
 Transit gateway cross-region peering does not support resolving public IPv4 DNS host names to private IPv4 addresses across VPCs on either side of the transit gateway peering attachment.
 Transit gateway peering attachments are not supported in the following AWS Regions: Asia Pacific (Hong Kong), Asia Pacific (Osaka-Local), and Middle East (Bahrain).
 
+### AWS TGW Orchestrator
+1. Orchestrates VPC to VPC and on-prem to VPC connectivities via AWS Transit Gateway.
+2. Automates AWS Resource Access Manager (RAM) for multi account support.
+3. Creates security boundaries between groups of VPCs to achieve network segmentation.
+4. Out-of-the-box integration of AWS Transit Gateway and Direct Connect and Internet to re-use what has been built.
+5. Provides Insane Mode high performance and features rich hybrid network for connecting to on-prem.
+6. Supports Bring Your Own Firewall to TGW deployment for inline traffic inspection (Firewall Network)
+7. Orchestrate AWS TGW Inter Region Peering and expand the Security Domains to be global.
+8. Advanced mode for end to end encryption where Aviatrix gateways are deployed in the AWS Spoke VPCs and Azure Spokes VNet.
+
 # Author Profile:
 - [LinkedIn: atuljkamble](https://www.linkedin.com/in/atuljkamble) 
 - [Twitter: atul_kamble](https://www.twitter.com/atul_kamble)
