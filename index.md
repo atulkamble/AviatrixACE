@@ -249,6 +249,40 @@ For enterprises that wish to deploy a firewall in AWS, Aviatrix’s FireNet depl
 - **Vendor Integration** Launch Palo Alto Networks VM-Series from the Aviatrix Controller console to simplify deployment.
 - **Automation** The Aviatrix Controller automatically updates Palo Alto VM-Series route tables when on-prem route changes or VPC attachment changes.
 
+
+# AWS Global Accelerator
+AWS Global Accelerator is a service that improves the availability and performance of your applications with local or global users. It provides static IP addresses that act as a fixed entry point to your application endpoints in a single or multiple AWS Regions, such as your Application Load Balancers, Network Load Balancers or Amazon EC2 instances.
+AWS Global Accelerator uses the AWS global network to optimize the path from your users to your applications, improving the performance of your traffic by as much as 60%. You can test the performance benefits from your location with a speed comparison tool. AWS Global Accelerator continually monitors the health of your application endpoints and redirects traffic to healthy endpoints in less than 30 seconds.
+
+### Benefits of AWS Global Accelerator
+- **Improve global application availability**\
+AWS Global Accelerator continually monitors the health of your application endpoints, such as your Network Load Balancers, Application Load Balancers, EC2 Instances, or Elastic IPs, instantly reacting to changes in their health or configuration. AWS Global Accelerator will then redirect user traffic to healthy endpoints that deliver the best performance and availability to your users.
+
+- **Accelerate your global applications**\
+AWS Global Accelerator optimizes the network path, taking advantage of the vast, congestion-free AWS global network. Regardless of where your users are located, AWS Global Accelerator intelligently routes traffic to the endpoint that provides the best application performance.
+
+- **Easily manage endpoints**\
+AWS Global Accelerator’s static IP addresses make it easy to move endpoints between Availability Zones or AWS Regions without needing to update your DNS configuration or change client-facing applications. You can use static IP addresses from the Amazon IP address pool or you can bring your own IP addresses (BYOIP) to AWS Global Accelerator.
+
+### AWS Global Accelerator - Use cases
+- **Scale for increased application utilization**\
+When application usage grows, the number of IP addresses and endpoints that you need to manage also increase. AWS Global Accelerator allows you to scale your network up or down. AWS Global Accelerator lets you associate regional resources, such as load balancers and EC2 instances, to two static IP addresses. You only whitelist these addresses once in your client applications, firewalls, and DNS records. With AWS Global Accelerator, you can add or remove endpoints in the AWS Regions, run blue/green deployment, and A/B test without needing to update the IP addresses in your client applications. This is particularly useful for IoT, retail, media, automotive and healthcare use cases in which client applications cannot be updated frequently.
+
+- **Accelerate latency-sensitive applications**\
+Many applications, such as gaming, media, mobile applications, and financial applications, need very low latency for a great user experience. To improve the user experience, AWS Global Accelerator directs user traffic to the nearest application endpoint to the client, thus reducing internet latency and jitter. It routes the traffic to the closest edge location via Anycast, then by routing it to the closest regional endpoint over the AWS global network. AWS Global Accelerator quickly reacts to changes in network performance to improve your users’ application performance.
+
+- **Disaster recovery for multi-region & multi-Availability Zone resiliency**\
+You need to rely on your network to always be available. You might be running your application across multiple Availability Zones (AZs) or AWS Regions for disaster recovery, higher availability, lower latency, or compliance. If AWS Global Accelerator detects failure of your application endpoint in the primary AZ or AWS Region, it instantly triggers traffic re-routing to your application endpoint in the next available, closest endpoint in another AZ or AWS Region.
+
+- **Protect your applications**\
+When making your Application Load Balancers internet-facing or your EC2 instances public to serve your end users, you also increase your exposure to attacks from the internet. AWS Global Accelerator allows you to add an internal Application Load Balancer or a private EC2 instance as an endpoint. By using AWS Global Accelerator as the single internet-facing access point, you protect your applications running on AWS from distributed denial of service (DDoS) attacks and control how your end users reach your applications. AWS Global Accelerator creates a peering connection between the AWS Global Accelerator and your Amazon Virtual Private Cloud (Amazon VPC). The traffic between the two VPCs uses private IP addresses.
+
+
+
+
+
+
+
 # Author Profile:
 - [LinkedIn: atuljkamble](https://www.linkedin.com/in/atuljkamble) 
 - [Twitter: atul_kamble](https://www.twitter.com/atul_kamble)
