@@ -95,10 +95,10 @@ The architecture is valid for single-cloud-single-region, single-cloud-multiple-
 The cloud core of the multi-cloud network architecture goes beyond simple connectivity. It scales and supports the rapid evolution of applications and businesses. It also delivers a common data plane by supporting native cloud constructs, APIs, and adds advanced capabilities to form a common data plane with the visibility and control required to optimize the multi-cloud network.
 Within the cloud core, there are two subdivisions: The applications layer and the global transit layer.
 
-**The Applications Layer**\
+- **The Applications Layer**\
 This is where the applications are. These applications could be sitting in VPC/VNET and running as instances or VMs. The Aviatrix controller embraces the native constructs of the cloud from this layer. This is the area where applications are deployed using their respective operating systems. 
 
-**The Global Transit Layer**\
+- **The Global Transit Layer**\
 Aviatrix software enables enterprise IT to easily deploy a high-availability, multi-cloud network data plane with end-to-end encryption, high-performance encryption, multi-cloud security domains, and operational telemetry operations teams need. This is the main point of connection for every aspect of the cloud. This global transit layer also has the notion of inserting services in its platform, which is done through the service insertion framework.  
 
 **Cloud Security**\
