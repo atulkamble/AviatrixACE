@@ -331,7 +331,7 @@ OpenVPN is open-source commercial software that implements virtual private netwo
 - **UDP-based VPN** For a high performance user VPN solution, use Aviatrix integrated AWS Route53 round robin routing to load balance multiple Aviatrix VPN gateways. When Route53 round robin routing is used, OpenVPN® client software runs on UDP port 1193. UDP-based VPN has improved file transfer performance.
 - **Geo VPN** For TCP-based VPN, you can use Aviatrix integrated AWS Route53 latency-based routing to load balance clients residing in different geographic locations.
 
-**Logging Integration**\
+**Logging Integration**
 - **VPN User** connection history and bandwidth usage can be logged to Splunk, SumoLogic, ELK, Remote Syslog and DataDog.
 - **User Activity** Each VPN user TCP/UDP session can be logged to Splunk, SumoLogic, ELK, Remote Syslog and DataDog.
 
