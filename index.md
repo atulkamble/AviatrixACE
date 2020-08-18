@@ -80,6 +80,44 @@ Drive your cloud networking decisions with intuitive, meaningful, real-time repo
 3. API integration with modern cloud tools: Splunk, SumoLogic, Syslog, ELK and Datadog.
 4. Robust API to easily integrate with Netflow and CloudWatch
 
+# High Availability working with Aviatrix
+There are many aspects to the Aviatrix Software Defined Cloud Routing platform that can claim the title of High Availability. But the way that some of these components deploy can differ depending upon which component or gateway configuration you are working with. This article attempts to explain them all - for both the AVX Controller and AVX Gateway.
+
+The AVX Controller
+**HA Model: Active / Passive [Recovery Time Objective: 2-3 mins]**
+The Controller can be deployed to be highly available in an active/passive failover model. The mechanism is dependent on several moving parts that need to be configured so that the service layers within AWS are properly accessible. It leverages an autoscaling group and a Lambda function that monitors the Controller instance which fires off the creation of a new one should the controller suddenly become unreachable.
+You will notice a link to a CloudFormation stack which will run you through a similar process for firing up the Controller the first time, but a few more details are needed this time such as designating a role for access to the S3 bucket where your backup files will live and designating the neighboring subnets that will house the new Controller in the event of a failover. The process requires a lot of detailed steps so it is a good idea to test out the failover process once you have completed the setup. To do this, once you have completed the HA setup, simply wall up the controller using a security group to make it unreachable and watch the EC2 register spawn a new instance that has the same EIP as your initial controller.
+
+**Aviatrix Gateway-based HA**
+There are three kinds of Gateway-based HA:
+- Peering
+- Egress Filtering
+- Site2Cloud
+The gateways are the most critical point of failover support provided by the Aviatrix platform, even more so than the Controller itself. If a gateway were to come down, then data stops flowing. If the Controller were to come down, then you wouldn’t be able to make any more changes to your gateway configurations until you launched another one from backup, but it doesn’t affect network connectivity.
+
+To start using the HA use-cases, you need to put the gateway into HA mode. To do this, you create a gateway via the controller per the usual course, but then you pop back in to edit mode once the gateway shows available in the gateway display screen.
+From this Gateway edit mode, you will find the option to make the gateway ready for High Availability Peering -- but don’t let this fool you. This option prepares the gateway for much more than just HA peering. This is the step you will need to complete as a first step to enable HA for Peering, VPC Egress Filtering, and Site2Cloud connections.
+
+**Peering / Tunnels: Active / Passive [Recovery Time Objective: 30sec / 2-3 mins]**
+The primary function of the HA Gateway as depicted in the description in the Controller is to create a pair for high availability peering. This will allow you to connect two sets of gateway pairs to each other across VPCs to give you an industry standard internetworking cloud connection that is highly available. This comes in two different failover times of 30 seconds and 2-3 minutes, the first of which represents a second tunnel that is up and available, but with no active routes through it. The failover time is simply a matter of modifying the route tables so that traffic is rerouted in case of an endpoint failure. The second option is less expensive, as you don’t have to pay for the second tunnel, but you are saddled with the wait time for the Controller to spin up a new gateway instance, create the tunnel and modify the route tables.
+
+**FQDN Egress Filter: Active / Active**
+If your egress traffic demands are great and you would like to lighten the load beyond scaling up the size of the Gateway instance, you can do so via the same method you did to get a Gateway ready for HA peering. Simply use the same function, “Gateway for High Availability Peering” after you select your Gateway and hit Edit, choose the public subnet you want your Egress Filter pair to be in and hit Create. What this will do is create another gateway with the same Egress Filtering configuration as the other, and then it will assume the egress target routes for half of the private subnets in the VPC. If one of these gateways were to go down, the route tables would be updated to point to the remaining Egress Filter Gateway until the controller could spin up a new one in its place.
+
+**Site2Cloud: Active / Passive [RTO: 30sec]**
+Site2Cloud is a direct descendant of Aviatrix Encrypted Peering, so naturally, it falls into this same category of Gateway-based HA. To create an HA Site2Cloud connection, you must first create the HA pair in the Gateway Edit screen per usual and then when you get to the lower half of the IPSec Tunnel configuration options, you can check the ‘Enable HA’ box, and this will open up three more forms for you to fill out based upon the backup gateway that you will be enlisting in your Site2Cloud connection. If you use a backup Gateway that is not an HA pair of the first, it will not work.
+
+**Load Balanced HA Configurations**
+**User2Cloud UserVPN Gateway: Active / Active**
+If you want to have more than one Gateway support the load of the incoming connections of your VPN users, there is a trick that you can perform during the Gateway creation dialogue screen. The option to Enable ELB is in the enable position by default where you select the advanced options of your VPN Gateway (‘VPN Access’ is the name of the checkbox). To create a set of load balanced UserVPN Gateways, leave the ELB set to enabled and give the ELB Name a designation. To put another Gateway into this load balanced stack, you have but to repeat this process and use the same name in the ELB Name box.
+
+**Workflow Bound HA Configurations:**
+You may notice that there are ways to enable HA embedded right into the Transit Network Setup workflow. Step 2 and step 5 both allow you to enable HA for a particular Gateway at a particular step in your build process and creating an HA pair for these types of Gateways are unique and follow slightly different procedures than simply creating the pair from the Gateway Edit function.
+In almost every Transit build enabled by Aviatrix, Step 1 of the Transit Network workflow has been executed to create the Transit VPC Gateway, which is a gateway deployed with special feature sets that enable it to manage the traffic coming and going through the Transit VPC. This gateway is different from the others given that it is a critical build for the Transit VPC.
+
+That being said, these workflows bound Gateway-based HA enablement functions that originate from the workflows via these buttons are the same as if you did it from the Gateway edit screen. Both ways will get you an HA configuration.
+
+
 # Multi Cloud Network Architecture (MCNA)
 MCNA is unlike any other architecture because it embraces, controls, and manages not only the native cloud constructs but also provides advanced services beyond what the Cloud Services Providers (AWS, Azure, GCP, and OCI) can provide. It provides a consistent and repeatable architecture across multiple clouds, being the first in the industry to do so, making it an essential part of the present and future of the public cloud.
 Aviatrix creates a purpose-built Multi-Cloud Network Architecture (MCNA) by implementing a data plane through dynamic and software-defined routing with a centralized control plane. Security is built into the network architecture through segmentation, encryption, ingress and egress filtering, and security services insertion. Aviatrix also leverages orchestrating cloud-native constructs, where necessary, in building and controlling the enterprise network and life-cycle management of the overall architecture. 
@@ -164,8 +202,6 @@ Deploy hybrid clouds by securely connecting cloud-based applications to on-premi
 
 # Remote User VPN
 Aviatrix provides a cloud-native and feature-rich client VPN solution. The solution is based on OpenVPN® and is compatible with all OpenVPN® clients. In addition, Aviatrix provides its own client that supports SAML authentication directly from the client.
-
-
 
 # Aviatrix Transit Architecture for Azure
 
