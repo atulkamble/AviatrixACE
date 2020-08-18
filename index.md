@@ -323,7 +323,7 @@ OpenVPN is open-source commercial software that implements virtual private netwo
 - **Shared Certificate** Supports a shared certificate arrangement among VPN users. (When this option is is selected, you should enable additional authentication options to ensure secure access.)
 - **Client SAML Integration** Authenticates a VPN user directly from the Aviatrix VPN client to any IDP via SAML protocol.
 
-**Authorization**\
+**Authorization**
 **Profile-Based Access Control** Each VPN user can be assigned to a profile that is defined by access privileges to network, host, protocol and ports. The access control is dynamically enforced when a VPN user connects to the public cloud via an Aviatrix VPN gateway.
 
 **Scale Out Performance**
