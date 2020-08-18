@@ -299,6 +299,45 @@ You need to rely on your network to always be available. You might be running yo
 - **Protect your applications**\
 When making your Application Load Balancers internet-facing or your EC2 instances public to serve your end users, you also increase your exposure to attacks from the internet. AWS Global Accelerator allows you to add an internal Application Load Balancer or a private EC2 instance as an endpoint. By using AWS Global Accelerator as the single internet-facing access point, you protect your applications running on AWS from distributed denial of service (DDoS) attacks and control how your end users reach your applications. AWS Global Accelerator creates a peering connection between the AWS Global Accelerator and your Amazon Virtual Private Cloud (Amazon VPC). The traffic between the two VPCs uses private IP addresses.
 
+# Aviatrix OpenVPN
+OpenVPN is a registered trademark of OpenVPN Inc.
+OpenVPN is open-source commercial software that implements virtual private network (VPN) techniques to create secure point-to-point or site-to-site connections in routed or bridged configurations and remote access facilities. It uses a custom security protocol that utilizes SSL/TLS for key exchange.
+
+
+### Aviatrix OpenVPN® Feature Highlights
+**VPN Management**\
+- **Centrally Managed** A single pane of glass allows you to manage all VPN users, VPN certificates and VPN user visibility.
+- **OpenVPN® Compatible** Built on OpenVPN® and is compatible with all OpenVPN® client software.
+- **Split Tunnel** Supports split tunnel mode where only specified CIDRs ranges go through the VPN tunnel.
+- **Full Tunnel** Supports full tunnel mode where all user IP sessions including Internet browsing go through the VPN tunnel.
+- **PKI Management** Supports Bring Your Own (BYO) PKI management system.
+- **Force Disconnect** Any admin can force disconnect a VPN user from the controller console.
+- **Dashboard** View all active VPN users and their connection history from the controller console dashboard.
+- **API** Support API for all management activities.
+
+**Authentication Options**\
+- **LDAP/AD Integration** Authenticates VPN user from Aviatrix gateways in addition to VPN certificate authentication.
+- **DUO Integration** Authenticates VPN user from Aviatrix gateways in addition to VPN cert authentication.
+- **OKTA Integratio** Authenticates VPN user from Aviatrix gateways in addition to VPN cert authentication.
+- **MFA Integration** Combines LDAP and DUO for multi-factor authentication.
+- **Shared Certificate** Supports a shared certificate arrangement among VPN users. (When this option is is selected, you should enable additional authentication options to ensure secure access.)
+- **Client SAML Integration** Authenticates a VPN user directly from the Aviatrix VPN client to any IDP via SAML protocol.
+
+**Authorization**\
+**Profile-Based Access Control** Each VPN user can be assigned to a profile that is defined by access privileges to network, host, protocol and ports. The access control is dynamically enforced when a VPN user connects to the public cloud via an Aviatrix VPN gateway.
+
+**Scale Out Performance**\
+- **TCP-based VPN** For a universal/no firewall/no fuss user VPN solution, use an Aviatrix integrated NLB to load balance multiple Aviatrix VPN gateways. When NLB is used, OpenVPN® client software runs on TCP port 443. TCP-based VPN requires no special corporate firewall rules when VPN client is on-prem.
+- **UDP-based VPN** For a high performance user VPN solution, use Aviatrix integrated AWS Route53 round robin routing to load balance multiple Aviatrix VPN gateways. When Route53 round robin routing is used, OpenVPN® client software runs on UDP port 1193. UDP-based VPN has improved file transfer performance.
+- **Geo VPN** For TCP-based VPN, you can use Aviatrix integrated AWS Route53 latency-based routing to load balance clients residing in different geographic locations.
+
+**Logging Integration**\
+- **VPN User** connection history and bandwidth usage can be logged to Splunk, SumoLogic, ELK, Remote Syslog and DataDog.
+- **User Activity** Each VPN user TCP/UDP session can be logged to Splunk, SumoLogic, ELK, Remote Syslog and DataDog.
+
+**Client Software**\
+OpenVPN® Client Software All OpenVPN® client software is supported. The supported clients are macOS, Windows, iOS, Android, Chromebook, Linux and BSD.
+Aviatrix VPN Client Aviatrix VPN Client supports macOS, Windows and Linux Debian distribution and BSD distribution. Choose Aviatrix VPN Client if you require SAML authentication directly from VPN client software.
 
 
 
