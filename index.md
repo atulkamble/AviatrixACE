@@ -388,6 +388,8 @@ BGP is the standard routing protocol commonly used in the Internet to exchange r
 - **Why use BGP?**
 BGP is an optional feature you can use with Azure Route-Based VPN gateways. You should also make sure your on-premises VPN devices support BGP before you enable the feature. You can continue to use Azure VPN gateways and your on-premises VPN devices without BGP. It is the equivalent of using static routes (without BGP) vs. using dynamic routing with BGP between your networks and Azure.
 
+# FlightPath
+FlightPath is a troubleshooting tool. It retrieves and displays, in a side by side fashion, AWS EC2 related information such as Security Groups, Route table and route table entries and network ACL. This helps you to identify connectivity problems.
 
 # Author Profile:
 - [LinkedIn: atuljkamble](https://www.linkedin.com/in/atuljkamble) 
