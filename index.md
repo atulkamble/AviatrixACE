@@ -396,6 +396,25 @@ Aviatrix High Performance Encryption (HPE), also known as ActiveMesh Insane Mode
 
 If your enterprise security policy requires encryption for data in motion, Aviatrix InsaneMode encryption provides the best and most efficient single instance encryption performance.
 
+# Internet Protocol Security (IPsec)
+IPsec (Internet Protocol Security) is a suite of protocols that secure network communication across IP networks. It provides security services for IP network traffic such as encrypting sensitive data, authentication, protection against replay and data confidentiality.
+
+IPsec uses the following protocols to secure the IP network traffic:
+
+- **Authentication Header (AH)** – Authentication header protects data within the IP packet from tampering. Tampering means anyone trying to change the contents of the packet sent from the server to the client. IPSec digitally signs the contents of the entire packet (including payload) using an Authentication Header thereby providing protection against replay attacks, spoofing, and tampering. While the authentication header protects data from tampering, it will not stop anyone from seeing it.
+
+- **Encapsulating Security Payload (ESP)** – This protocol encrypts the payload of a data packet and provides authentication, replay proofing, and integrity checking. It provides confidentiality through encryption of the packet
+
+- **Internet Key Exchange (IKE)** – IKE protocol allows hosts at both ends of a VPN tunnel to encrypt and decrypt data packets using mutually agreed upon keys/certificate and method for encryption
+IPSec can be broadly used for following purposes: to build a dedicated tunnel between two hosts using IPsec tunneling so that traffic between two hosts is encrypted, secure and encrypt the application layer data, providing security to routers sending data across the internet and to provide authentication without encryption
+
+IPSec can be usually configured to operate in the following two modes:
+
+- **Transport Mode** – Transport mode is used for end to end communications, for example, communication between a host and server. In this case, data contents (IP payload) are protected, but anyone looking at the network traffic can see network traffic patterns. In transport mode, the responsibility to perform any cryptographic operations like encryption etc. depends on the sender and receiver
+
+- **Tunnel Mode** – Tunnel mode encrypts the entire IP packet. Usually, it is used to encrypt traffic between two routers/gateways connected over the Internet via IPSEC VPN tunnels. In tunnel mode, cryptographic operations like encryption etc., are handled by gateways/routers at both ends of the tunnels, in addition to the sender and receiver
+
+
 ## InsaneMode Benefits
 - **30Gbps IPSEC** Using a single instance from C5 series to the latest C5n series, single instance IPSEC performance reaches up to 30Gbps.
 - **Private Link** InsaneMode connectivity is supported over AWS Peering and AWS Direct Connect.
