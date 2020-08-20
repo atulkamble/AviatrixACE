@@ -394,6 +394,15 @@ FlightPath is a troubleshooting tool. It retrieves and displays, in a side by si
 # ActiveMesh Insane Mode Encryption Performance
 Aviatrix High Performance Encryption (HPE), also known as ActiveMesh Insane Mode, achieves line rate performance with encryption in AWS when Jumbo frames are deployed (the default setting for AWS instances). The test benchmark baseline is the native AWS peering where no Aviatrix gateways are deployed in the VPCs. Adding 500 stateful firewall rules have little impact to the performance.
 
+If your enterprise security policy requires encryption for data in motion, Aviatrix InsaneMode encryption provides the best and most efficient single instance encryption performance.
+
+## InsaneMode Benefits
+- **30Gbps IPSEC** Using a single instance from C5 series to the latest C5n series, single instance IPSEC performance reaches up to 30Gbps.
+- **Private Link** InsaneMode connectivity is supported over AWS Peering and AWS Direct Connect.
+- **Stateful Firewall** Aviatrix gateways support stateful firewall for additional security policies, event and packet logging.
+- **Unlimited Routes** Aviatrix gateways have no limit to how many on-prem routes or VPC routes they can have.
+- **Advanced NAT** Advanced NAT function for any packet transforming before and after routing function.
+
 # Author Profile:
 - [LinkedIn: atuljkamble](https://www.linkedin.com/in/atuljkamble) 
 - [Twitter: atul_kamble](https://www.twitter.com/atul_kamble)
