@@ -430,6 +430,8 @@ Network Address Translation (NAT) is a process that enables resources in private
 - **Dynamic NAT** – One to many mapping between a private IP address and a pool of public IP addresses
 - **Port Address Translation (PAT)** – A type of Dynamic NAT that maps multiple private IP addresses to a single public IP address by using different ports.
 
+# Aviatrix PrivateS3
+Aviatrix PrivateS3 is a feature that allows you to leverage AWS Direct Connect to transfer objects and files between on-prem and S3 while giving you control of the S3 buckets by the ability to whitelist the S3 buckets.
 
 # Author Profile:
 - [LinkedIn: atuljkamble](https://www.linkedin.com/in/atuljkamble) 
