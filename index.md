@@ -445,6 +445,10 @@ Amazon GuardDuty is a threat detection service that continuously monitors for ma
 FlightPath is a troubleshooting tool. It retrieves and displays, in a side by side fashion, AWS EC2 related information such as Security Groups, Route table and route table entries and network ACL. This helps you to identify connectivity problems.
 You do not need to launch Aviatrix gateways to use this tool, but you need to create Aviatrix accounts so that the Controller can use the account credentials to execute AWS APIs to retrieve relevant information
 
+# Firewall Network (FireNet) Workflow
+Aviatrix Firewall Network (FireNet) is a turn key network solution to deploy firewall instances in the cloud.
+FireNet is a solution for integrating firewalls in the AWS TGW deployment.
+
 # Author Profile:
 - [LinkedIn: atuljkamble](https://www.linkedin.com/in/atuljkamble) 
 - [Twitter: atul_kamble](https://www.twitter.com/atul_kamble)
