@@ -433,6 +433,11 @@ Network Address Translation (NAT) is a process that enables resources in private
 # Aviatrix PrivateS3
 Aviatrix PrivateS3 is a feature that allows you to leverage AWS Direct Connect to transfer objects and files between on-prem and S3 while giving you control of the S3 buckets by the ability to whitelist the S3 buckets.
 
+## Benefits of PrivateS3
+- Transferring objects/data between on-prem and S3 by leveraging Direct Connect without using public VIF.
+- The ability to control which S3 buckets can be accessed.
+- The ability to deploy multiple Aviatrix gateways to load balance the data traffic.
+
 # Author Profile:
 - [LinkedIn: atuljkamble](https://www.linkedin.com/in/atuljkamble) 
 - [Twitter: atul_kamble](https://www.twitter.com/atul_kamble)
