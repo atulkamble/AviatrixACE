@@ -396,6 +396,13 @@ Aviatrix High Performance Encryption (HPE), also known as ActiveMesh Insane Mode
 
 If your enterprise security policy requires encryption for data in motion, Aviatrix InsaneMode encryption provides the best and most efficient single instance encryption performance.
 
+## InsaneMode Benefits
+- **30Gbps IPSEC** Using a single instance from C5 series to the latest C5n series, single instance IPSEC performance reaches up to 30Gbps.
+- **Private Link** InsaneMode connectivity is supported over AWS Peering and AWS Direct Connect.
+- **Stateful Firewall** Aviatrix gateways support stateful firewall for additional security policies, event and packet logging.
+- **Unlimited Routes** Aviatrix gateways have no limit to how many on-prem routes or VPC routes they can have.
+- **Advanced NAT** Advanced NAT function for any packet transforming before and after routing function.
+
 # Internet Protocol Security (IPsec)
 IPsec (Internet Protocol Security) is a suite of protocols that secure network communication across IP networks. It provides security services for IP network traffic such as encrypting sensitive data, authentication, protection against replay and data confidentiality.
 
@@ -414,13 +421,15 @@ IPSec can be usually configured to operate in the following two modes:
 
 - **Tunnel Mode** – Tunnel mode encrypts the entire IP packet. Usually, it is used to encrypt traffic between two routers/gateways connected over the Internet via IPSEC VPN tunnels. In tunnel mode, cryptographic operations like encryption etc., are handled by gateways/routers at both ends of the tunnels, in addition to the sender and receiver
 
+# Network Address Translation (NAT)
 
-## InsaneMode Benefits
-- **30Gbps IPSEC** Using a single instance from C5 series to the latest C5n series, single instance IPSEC performance reaches up to 30Gbps.
-- **Private Link** InsaneMode connectivity is supported over AWS Peering and AWS Direct Connect.
-- **Stateful Firewall** Aviatrix gateways support stateful firewall for additional security policies, event and packet logging.
-- **Unlimited Routes** Aviatrix gateways have no limit to how many on-prem routes or VPC routes they can have.
-- **Advanced NAT** Advanced NAT function for any packet transforming before and after routing function.
+Network Address Translation (NAT) is a process that enables resources in private networks to connect to the Internet but prevents entities on the internet to initiate connections with the resources in private network. A device like a router with NAT capability translates the private addresses in the internal network into globally unique public IP addresses, thereby enabling resources in the private network to access resources outside its network (on the internet). In addition to this, NAT can also be configured in such a way that one public IP address can represent a group of resources in the internal network thereby hiding the entire internal network behind the one public IP and giving an extra layer of security.
+
+## Different types of NAT
+- **Static NAT** – One on one mapping between a singular private address and a public IP address.
+- **Dynamic NAT** – One to many mapping between a private IP address and a pool of public IP addresses
+- **Port Address Translation (PAT)** – A type of Dynamic NAT that maps multiple private IP addresses to a single public IP address by using different ports.
+
 
 # Author Profile:
 - [LinkedIn: atuljkamble](https://www.linkedin.com/in/atuljkamble) 
