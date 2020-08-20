@@ -391,6 +391,9 @@ BGP is an optional feature you can use with Azure Route-Based VPN gateways. You 
 # FlightPath
 FlightPath is a troubleshooting tool. It retrieves and displays, in a side by side fashion, AWS EC2 related information such as Security Groups, Route table and route table entries and network ACL. This helps you to identify connectivity problems.
 
+# ActiveMesh Insane Mode Encryption Performance
+Aviatrix High Performance Encryption (HPE), also known as ActiveMesh Insane Mode, achieves line rate performance with encryption in AWS when Jumbo frames are deployed (the default setting for AWS instances). The test benchmark baseline is the native AWS peering where no Aviatrix gateways are deployed in the VPCs. Adding 500 stateful firewall rules have little impact to the performance.
+
 # Author Profile:
 - [LinkedIn: atuljkamble](https://www.linkedin.com/in/atuljkamble) 
 - [Twitter: atul_kamble](https://www.twitter.com/atul_kamble)
