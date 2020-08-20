@@ -449,6 +449,22 @@ You do not need to launch Aviatrix gateways to use this tool, but you need to cr
 Aviatrix Firewall Network (FireNet) is a turn key network solution to deploy firewall instances in the cloud.
 FireNet is a solution for integrating firewalls in the AWS TGW deployment.
 
+# Aviatrix CloudWAN
+The Aviatrix Multi-Cloud Networking Platform provides a frictionless Branch Office-to-Cloud Networking solution, delivering centralized, simple, cloud-based, automated reconfiguration of existing IOS branch routers to securely connect directly to the closest cloud access point. The automated reconfiguration includes IPSec crypto, BGP, intra- and inter-cloud route propagation, and more. CloudWAN will also take advantage of cloud-native anycast IP optimal-path routing features offered by some cloud providers.
+
+As the center of enterprise IT gravity shifts to the cloud, optimal access to applications equals optimal access to cloud. Legacy application traffic patterns were based on WAN architectures and more recently SD-WAN refreshes, both optimized to connect branch offices to centralized data centers as efficiently as possible. However, in the cloud era, neither of these are the most efficient or cost-effective approach. A simpler and more cost optimized approach is to leverage existing branch office routers, without upgrading either hardware or software, to connect to the closest cloud access point and leverage the cloud provider’s global network to reach cloud-based applications and resources.
+
+CloudWAN provides centralized, simple, cloud-based, automated reconfiguration of existing IOS branch routers to securely connect directly to the optimal cloud access point.
+
+## Key Highlights
+Aviatrix CloudWAN is designed to connect and manage branch office IOS routers to the cloud directly and has the following benefits:
+
+- **Centrally managed** – Uses a single pane of glass to provision, onboard, and monitor ALL your Cisco IOS routers health and stats.
+- **Automation and orchestration** – Automates reconfiguration of Cisco IOS branch routers from the cloud. Orchestrates connectivity directly to Aviatrix AVX Service Gateways, AWS Transit Gateways, or Azure Virtual WANs.
+- **Low latency** – CloudWAN configures existing IOS routers to connect to the nearest cloud edge and routes traffic through the cloud provider to cloud-based applications and resources. When available, CloudWAN will take advantage of cloud-native anycast IP optimal-path routing across the cloud provider infrastructure.
+- **Use existing hardware and software** – Leverage the investment you have already made in branch office routers to connect to the cloud.
+- **Automated router reconfiguration** – Supports a range of configuration features such as version control, configuration rollback, diff, BGP routing and IPSec crypto.
+
 # Author Profile:
 - [LinkedIn: atuljkamble](https://www.linkedin.com/in/atuljkamble) 
 - [Twitter: atul_kamble](https://www.twitter.com/atul_kamble)
