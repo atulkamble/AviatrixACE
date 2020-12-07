@@ -12,7 +12,6 @@ The ACE certification is designed for individuals who already understand basic n
 # Aviatrix ACE (Aviatrix Certified Engineer) Multi-Cloud Networking Associate Exam Study Guide + Notes
 
 - [Aviatrix ACE Exam Study Notes by Atul](https://bit.ly/AviatrixACE)
-- [Aviatrix ACE Practice Tests | Udemy by Atul](https://bit.ly/AviatrixTest)
 - [Official ACE FREE Course(Code ACEONLINE)](https://aviatrix.teachable.com/)
 - [Aviatrix Docs](https://docs.aviatrix.com/)
 - [Aviatrix Cloud Network Learning Center](https://a.aviatrix.com/learning/)
