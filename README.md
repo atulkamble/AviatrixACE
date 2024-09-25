@@ -24,4 +24,4 @@ The ACE certification is designed for individuals who already understand basic n
 - [LinkedIn: atuljkamble](https://www.linkedin.com/in/atuljkamble) 
 - [Twitter: atul_kamble](https://www.x.com/atul_kamble)
 - [Github: atulkamble](https://www.github.com/atulkamble)
-- [Medium: atuljkamble](https://atul-kamble.medium.com/))
+- [Medium: atul-kamble](https://atul-kamble.medium.com/))
