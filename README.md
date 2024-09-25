@@ -22,6 +22,6 @@ The ACE certification is designed for individuals who already understand basic n
 
 # Technical Author Profile (Study Guide + Notes):
 - [LinkedIn: atuljkamble](https://www.linkedin.com/in/atuljkamble) 
-- [Twitter: atul_kamble](https://www.twitter.com/atul_kamble)
+- [Twitter: atul_kamble](https://www.x.com/atul_kamble)
 - [Github: atulkamble](https://www.github.com/atulkamble)
-- [Medium: atuljkamble](https://atuljkamble.medium.com/)
+- [Medium: atuljkamble](https://atul-kamble.medium.com/))
